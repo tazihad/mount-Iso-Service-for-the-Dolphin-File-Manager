@@ -7,14 +7,17 @@ X-KDE-Priority=TopLevel
 X-KDE-StartupNotify=false
 Icon=application-x-cd-image
 X-KDE-Submenu=Mount/unmount iso image
+X-KDE-Submenu[nl]=ISO-bestanden aan-/ontkoppelen
 
 
 [Desktop Action unmount]
 Name=Unmount
+Name[nl]=Ontkoppelen
 Icon=media-eject
 Exec=udisksctl loop-delete -b `losetup -j %f | cut -d ':' -f 1`
 
 [Desktop Action mount]
 Name=Mount
+Name[nl]=Aankoppelen
 Icon=media-mount
 Exec=udisksctl loop-setup -r -f %f
